@@ -48,7 +48,7 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
-     - name: Upload to Release
+    - name: Upload to Release
       uses: softprops/action-gh-release@4634c16e79c963813287e889244c50009e7f0981
       with:
         files: |
