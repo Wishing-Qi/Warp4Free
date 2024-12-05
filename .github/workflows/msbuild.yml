@@ -54,9 +54,12 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
-    - name: Upload Release
-      uses: ncipollo/release-action@v1.12.0
+    - name: Upload to Release
+      uses: softprops/action-gh-release@4634c16e79c963813287e889244c50009e7f0981
       with:
-        artifacts: "release.zip"
-        token: ${{ secrets.GITHUB_TOKEN }}
-        tag: test0
+        files: |
+          release.zip
+        name: Warp4free
+        tag_name: ${{ github.run_id }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
