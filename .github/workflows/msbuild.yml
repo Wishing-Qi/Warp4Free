@@ -52,6 +52,6 @@ jobs:
       uses: actions/cache@v3
       with:
         key: Test
-        path: ${{env.GITHUB_WORKSPACE}}
+        path: D:\a\Warp4Free\Warp4Free\
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
